@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Introduction to JavaScript</title>
+
+		<!-- Load CSS libraries -->
+		<link rel="stylesheet" href="css/milligram.min.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<style>
+			/* *** ADD CUSTOM STYLES HERE *** */
+ 		</style>
+
+	</head>
+	<body>
+
+
+	<div class="container">
+
+		<h1>Global Attractions Attendance</h1>
+
+		<div class="user-control">
+			<select id="attraction-category" class="form-control" onchange="dataManipulation()">
+			  <option value="all">All Attractions</option>
+			  <option value="Theme Park">Theme Park</option>
+			  <option value="Water Park">Water Park</option>
+			  <option value="Museum">Museum</option>
+			</select>
+		</div>
+
+		<!-- Parent container of our bar chart -->
+		<div id="chart-area"></div>
+
+	</div>
+	
+	<div id="tooltip" class="hidden">
+		<p><strong>Annual Visitors</strong></p>
+		<p><span id="value">0</span></p>
+	</div>
+	  
+	<script src="js/d3.min.js"></script>
+
+	<!-- Completed: data loading, bar-chart rendering -->
+	<script src="js/global-attractions.js"></script>
+	<script src="js/barchart.js"></script>
+
+	<!-- *** ADD JS CODE TO THE FOLLOWING FILE: *** -->
+	<script src="js/lab2.js"></script>
+	</body>
+</html>
