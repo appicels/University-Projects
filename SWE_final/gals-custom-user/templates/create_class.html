@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static%}
+{% block title %}Create Class{% endblock %}
+
+{% block main %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+  
+    <title>Creative - Bootstrap Admin Template</title>
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- bootstrap theme -->
+    <link href= "{% static 'css/bootstrap-theme.css' %}" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href=" {% static 'css/elegant-icons-style.css' %}" rel="stylesheet" />
+    <link href=" {% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+    <!-- full calendar css-->
+    <link href=" {% static 'assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css' %}" rel="stylesheet" />
+    <link href=" {% static 'assets/fullcalendar/fullcalendar/fullcalendar.css' %}" rel="stylesheet" />
+    <!-- easy pie chart-->
+    <link href=" {% static 'assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css' %}" rel="stylesheet" type="text/css" media="screen" />
+    <!-- owl carousel -->
+    <link rel="stylesheet" href=" {% static 'css/owl.carousel.css' %}" type="text/css">
+    <link href=" {% static 'css/jquery-jvectormap-1.2.2.css' %}" rel="stylesheet">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href=" {% static 'css/fullcalendar.css' %}">
+    <link href=" {% static 'css/widgets.css' %}" rel="stylesheet">
+    <link href=" {% static 'css/style.css' %}" rel="stylesheet">
+    <link href=" {% static 'css/style-responsive.css' %}" rel="stylesheet" />
+    <link href=" {% static 'css/xcharts.min.css' %}" rel=" stylesheet">
+    <link href=" {% static 'css/jquery-ui-1.10.4.min.css' %}" rel="stylesheet">
+  </head>
+
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <!-- <div class="panel-heading">
+                <h3 class="panel-title">Create A New Survey</h3>
+            </div> -->
+
+            <form method="POST">
+                {% csrf_token %}
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- <div class="form-group">
+                                <label for="question">Enter Survey Question</label>
+                                {% render_field form.question class="form-control" rows="3" %}
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="option1" id="1">course name</label>
+                                {% render_field form.course_name class="form-control" id="fuck" %}
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="course_id" id="2">course_id</label>
+                                {% render_field form.course_id class="form-control" id="12"%}
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="course_date">course_date</label>
+                                {% render_field form.course_date class="form-control"%}
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="course_section">course_section</label>
+                                {% render_field form.course_section class="form-control" %}
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="course_semester" >course_semester</label>
+                                {% render_field form.course_semester class="form-control"%}
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <hr />
+                        <div class="col-lg-4">
+                            <a href="{% url 'home' %}">
+                            <button style = "font-size: x-small;"type="submit" class="btn btn-info">Submit</button>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

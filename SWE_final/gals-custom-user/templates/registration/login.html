@@ -1,0 +1,95 @@
+
+
+<!-- templates/registration/login.html -->
+{% extends 'base.html' %}
+{%load static%}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+  <meta name="author" content="GeeksLabs">
+  <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+  <link rel="shortcut icon" href="img/favicon.png">
+
+  <title>Login Page 2 | Creative - Bootstrap 3 Responsive Admin Template</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <!-- bootstrap theme -->
+  <link href="{% static 'css/bootstrap-theme.css' %}" rel="stylesheet">
+  <!--external css-->
+  <!-- font icon -->
+  <link href="{% static 'css/elegant-icons-style.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet" />
+  <!-- Custom styles -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style-responsive.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/styletwo.css' %}" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- =======================================================
+      Theme Name: NiceAdmin
+      Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+      Author: BootstrapMade
+      Author URL: https://bootstrapmade.com
+    ======================================================= -->
+</head>
+
+<body style="height:100px; background: linear-gradient(#394A59 70%, transparent 40%) no-repeat;">
+
+  <div class="container">
+      <!--<img alt="" src="{% static 'staticfiles/eagles.png' %}" style="height: 70px; position:fixed">-->
+
+      <form class="login-form" method="post"
+                   action="{% url 'login' %}">
+                 {% csrf_token %}
+
+      <div class="login-wrap">
+        <!--<p class="login-img"><i class="icon_lock_alt"></i></p>-->
+        <p class="login-img"><img src="{% static 'staticfiles/bclogo2.png' %}" style="height: 110px; position:center"</p>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="icon_profile"></i></span>
+          <input placeholder = "Username" id="id_username" name="username"
+                                       type="text" class="form-control" autofocus>
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+          <input placeholder="Password" id="id_password" name="password"
+                                   type="password" class="form-control">
+        </div>
+        <label class="checkbox">
+                <input type="checkbox" value="remember-me"> Remember me
+                <span class="pull-right"> <a href="{% url 'password_reset'%}"> Forgot Password?</a></span>
+            </label>
+        <button style="background-color:maroon" class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+
+      </div>
+    </form>
+
+
+    {% if form.errors %}
+      <p class=" label label-danger" style="background-color:maroon">
+          Your username and password didn't match.
+          Please try again.
+      </p>
+    {% endif %}
+
+
+
+</body>
+
+</html>
+
+{% endblock %}

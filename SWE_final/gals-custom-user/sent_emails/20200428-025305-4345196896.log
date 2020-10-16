@@ -1,0 +1,24 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: TestSite password reset
+From: webmaster@localhost
+To: tanky@bc.edu
+Date: Tue, 28 Apr 2020 02:53:05 -0000
+Message-ID: 
+ <158804238506.74749.7219957611194871666@sophies-macbook-pro-3.local>
+
+
+To initiate the password reset process for your  TestSite Account,
+click the link below:
+
+http://127.0.0.1:8000/accounts/reset/Nzg2Mjk1MjM/5g1-5633aa3b4263d841c19d/
+
+If clicking the link above doesn't work, please copy and paste the URL in a new browser
+window instead.
+
+Sincerely,
+The TestSite Team
+
+
+-------------------------------------------------------------------------------
